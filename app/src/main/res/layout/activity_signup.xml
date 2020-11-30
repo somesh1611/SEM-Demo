@@ -63,13 +63,17 @@
 
         android:orientation="vertical">
 
-        <EditText android:hint="Enter your name"
+        <EditText
+            android:id="@+id/signUp_name"
             android:layout_width="match_parent"
-            android:layout_height="60dp"/>
+            android:layout_height="60dp"
+            android:hint="Enter your Name" />
 
-        <EditText android:hint="Enter your phone number"
+        <EditText
+            android:id="@+id/signUp_email"
             android:layout_width="match_parent"
-            android:layout_height="60dp"/>
+            android:layout_height="60dp"
+            android:hint="Enter your Email ID" />
 
         <Spinner android:id="@+id/sp1"
             android:layout_width="match_parent"
@@ -82,27 +86,32 @@
             android:dropDownWidth="match_parent"
             tools:ignore="InvalidId" />
 
-        <EditText android:hint="Password"
+        <EditText
+            android:id="@+id/signUp_password"
             android:layout_width="match_parent"
-            android:layout_height="60dp"/>
+            android:layout_height="60dp"
+            android:hint="Password"
+            android:password="true" />
 
-        <EditText android:hint="Confirm Password"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"/>
+        <Button
+            android:id="@+id/signUp_button"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round"
+            android:text="Sign Up"
+            android:textColor="@android:color/white"
+
+            tools:ignore="MissingConstraints" />
+
+
 
 
 
     </LinearLayout>
 
-    <Button app:layout_constraintBottom_toBottomOf="@+id/LoginPanel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Sign Up"
-        android:background="@drawable/round"
-        android:textColor="@android:color/white"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        tools:ignore="MissingConstraints" />
 
 
 

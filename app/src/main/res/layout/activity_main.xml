@@ -6,108 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        tools:ignore="MissingConstraints">
-
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:src="@drawable/images" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        app:layout_constraintTop_toBottomOf="@+id/header"
-        android:layout_width="220dp"
-        android:layout_height="480dp"
-        android:background="@drawable/shape_left_panel"
-        tools:ignore="MissingConstraints" />
-
-    <TextView android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/LoginPanel"
-        android:textColor="@android:color/white"
-        android:layout_marginLeft="60dp"
-        android:layout_marginBottom="10dp"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        tools:ignore="MissingConstraints" />
-
-    <TextView android:id="@+id/tvSignUp"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/LoginPanel"
-        android:gravity="right"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sign Up"
-        tools:ignore="MissingConstraints" />
-
-    <LinearLayout
-        android:id="@+id/LoginPanel"
-        app:layout_constraintTop_toBottomOf="@+id/header"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_width="match_parent"
-        android:background="@drawable/shape_login_panel"
-        android:layout_height="350dp"
-        android:paddingTop="70dp"
-        android:paddingRight="40dp"
-        android:paddingLeft="40dp"
-
-        android:orientation="vertical">
-
-        <EditText android:hint="Email"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"/>
-
-        <EditText android:hint="Password"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"/>
-
-        <TextView android:layout_marginTop="15dp"
-            android:gravity="right"
-            android:text="Forgot password?"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
-
-    <Button app:layout_constraintBottom_toBottomOf="@+id/LoginPanel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Login"
-        android:background="@drawable/round"
-        android:textColor="@android:color/white"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        tools:ignore="MissingConstraints" />
-
-    <LinearLayout
+        android:text="Logout"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:padding="20dp"
-        android:gravity="center_horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView  android:text="Don't have an account?"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView android:id="@+id/tvSignUp2"
-            android:text="SIGN UP"
-            android:layout_marginLeft="15dp"
-
-            android:textSize="20sp"
-            android:textColor="@color/color_pink"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 
