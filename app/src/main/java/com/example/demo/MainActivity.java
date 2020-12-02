@@ -25,7 +25,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity {
 
 
-    Button logout;
+
 
     FirebaseAuth firebaseAuth;
 
@@ -33,19 +33,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // This function will execute when the user selects a logout button
-        logout=findViewById(R.id.logout_button);
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                // Sign out the user
-                firebaseAuth = FirebaseAuth.getInstance();
-                firebaseAuth.signOut();
-                Intent intent = new Intent(MainActivity.this, loginActivity.class);
-                startActivity(intent);
-            }
-        });
+        firebaseAuth = FirebaseAuth.getInstance();
+        if(firebaseAuth.getCurrentUser() != null)   {
+            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+            startActivity(intent);
+        }
+        else {
+            Intent intent = new Intent(MainActivity.this, loginActivity.class);
+            startActivity(intent);
+        }
     }
 
 
